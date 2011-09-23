@@ -38,7 +38,7 @@ canvas_width = 600.
 canvas_height = 450.
 
 @server
-surface = (%% Cairo.create_surface %%)(Int.of_float(canvas_width),Int.of_float(canvas_height)) 
+surface = (%% Cairo.create_surface %%)(Int.of_float(canvas_width),Int.of_float(canvas_height))
 context = (%% Cairo.create %%)(surface)
 
 
@@ -104,14 +104,3 @@ server = Server.simple_server(urls)
 
 @server
 atoms_sess2 : channel(list(line)) = SessionBuffer.make_send_to(Session.make_callback(l -> NetworkBuffer.broadcast(l,atoms_network)),250)
-
-// @server
-// color_random()=
-//   r()=Random.int(255)
-//   {r=r() g=r() b=r() a=255}
-// @server
-// _ = Scheduler.timer(100, ->
-//     rand(size) = Random.int(Int.of_float(size))
-//     rand_dim() = {x_px=rand(canvas_width) y_px=rand(canvas_height)}
-    
-//     Session.send(atoms_sess2,[(rand_dim(), rand_dim(), color_random(), Random.int(50))]))
