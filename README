@@ -1,16 +1,14 @@
 Collaborative white board
+=========================
 
-BUILDING
- make
+This is a demo for the Open World Forum 2011 - Code Awards.
 
-LAUNCHING
- ./opawhiteboard.exe
-(launches on port 8080)
-or
- ./opawhiteboard.exe -p nnnn
+### CHECK DEPENDENCIES
+ Download OPA: https://opalang.org/get.xmlt
+ Install libcairo for ocaml (`sudo apt-get install libcairo-ocaml-dev` or http://cgit.freedesktop.org/cairo-ocaml/)
 
-Once started you can start drawing with people but it will not support reloading.
-In order to do so, start a browser at the following adress:
-http://myhost:myport/i_m_a_builder
-it aims to build the image and send it back to the server.
-When we have an image manipulation library on server side, it won't be needed anymore.
+### BUILD
+    make
+
+### LAUNCH
+    ./opawhiteboard.exe -p 8080
